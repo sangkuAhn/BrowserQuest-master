@@ -8,29 +8,29 @@
 UI 시스템은 **Domain-Driven Layering** 원칙을 따르며, 개발자가 시스템 흐름을 파악하기 위해 확인해야 할 전체 소스 파일 목록은 다음과 같습니다.
 
 ### 🔌 플랫폼 진입점 및 프레임워크 (Entry & Framework)
-- `src/client/ClientEntry.luau`: 클라이언트 측 메인 진입점. 각 서비스 및 컨트롤러 초기화.
-- `src/shared/Core/Framework.luau`: 서비스/컨트롤러의 생명주기 관리 및 **의존성 주입(DI)** 엔진.
-- `src/shared/Core/UIEvents.luau`: 모듈 간 통신용 **시그널 중계기**. Registry 패턴을 통한 느슨한 결합 구현.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/ClientEntry.luau: 클라이언트 측 메인 진입점. 각 서비스 및 컨트롤러 초기화.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Core/Framework.luau: 서비스/컨트롤러의 생명주기 관리 및 **의존성 주입(DI)** 엔진.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Core/UIEvents.luau: 모듈 간 통신용 **시그널 중계기**. Registry 패턴을 통한 느슨한 결합 구현.
 
 ### 🎨 UI 레이아웃 엔진 및 스타일 (Layout & Styles)
-- `src/shared/Core/PopupLayout.luau`: **UI 핵심 렌더링 엔진**. 표준화된 팝업 레이아웃, 애니메이션, 드래그 로직 내장.
-- `src/shared/Data/UITheme.luau`: 색상, 폰트, 애니메이션 커브, 사운드 등 공통 **디자인 토큰**.
-- `src/shared/Data/ServiceConfig.luau`: UI 메뉴 배치 및 기능 활성화 등에 대한 **전역 설정 데이터**.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Core/PopupLayout.luau: **UI 핵심 렌더링 엔진**. 표준화된 팝업 레이아웃, 애니메이션, 드래그 로직 내장.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Data/UITheme.luau: 색상, 폰트, 애니메이션 커브, 사운드 등 공통 **디자인 토큰**.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Data/ServiceConfig.luau: UI 메뉴 배치 및 기능 활성화 등에 대한 **전역 설정 데이터**.
 
 ### 📱 반응형 시스템 (Responsive Layer)
-- `src/client/Core/ResponsiveManager.luau`: 화면 해상도(ViewportSize) 및 기기 특성 실시간 감지 및 `OnScreenModeChanged` 전파.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/Core/ResponsiveManager.luau: 화면 해상도(ViewportSize) 및 기기 특성 실시간 감지 및 `OnScreenModeChanged` 전파.
 
 ### 🗺️ HUD 및 인터랙션 서비스 (HUD & UI Services)
-- `src/client/UI/HUDService/init.luau`: HUD 요소들을 총괄하는 **중재자(Mediator)** 모듈.
-- `src/client/UI/HUDService/SideMenuUI.luau`: 메인 사이드 바. **동적 슬롯 배치** 및 아이콘 전용 모드 전환 로직.
-- `src/client/UI/MinimapUI.luau`: **반응형 미니맵 뷰어**. HUD 영역과의 간섭을 고려한 지능형 리사이징 적용.
-- `src/client/Systems/MinimapController.luau`: 미니맵의 **데이터 처리 및 마커 연산 로직** 담당.
-- `src/client/UI/ChatLogController.luau`: **커스텀 채팅 시스템**. 화면 모드별 가변 너비/높이 및 텍스트 스케일링 적용.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/HUDService/init.luau: HUD 요소들을 총괄하는 **중재자(Mediator)** 모듈.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/HUDService/SideMenuUI.luau: 메인 사이드 바. **동적 슬롯 배치** 및 아이콘 전용 모드 전환 로직.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/MinimapUI.luau: **반응형 미니맵 뷰어**. HUD 영역과의 간섭을 고려한 지능형 리사이징 적용.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/Systems/MinimapController.luau: 미니맵의 **데이터 처리 및 마커 연산 로직** 담당.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/ChatLogController.luau: **커스텀 채팅 시스템**. 화면 모드별 가변 너비/높이 및 텍스트 스케일링 적용.
 
 ### 팝업 모듈 예시 (UI Component Examples)
-- `src/client/UI/InventoryUI/init.luau`: 폴더 구조화된 복잡한 UI의 전형적인 구현 사례.
-- `src/client/UI/CharacterInfoUI.luau`: `PopupLayout`을 활용한 표준 팝업 구현 모델.
-- `src/client/UI/SettingsUI.luau`: 사용자 설정 및 데이터 연동 UI 예시.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/InventoryUI/init.luau: 폴더 구조화된 복잡한 UI의 전형적인 구현 사례.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/CharacterInfoUI.luau: `PopupLayout`을 활용한 표준 팝업 구현 모델.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/UI/SettingsUI.luau: 사용자 설정 및 데이터 연동 UI 예시.
 
 ---
 
@@ -50,7 +50,7 @@ UI 시스템은 **Domain-Driven Layering** 원칙을 따르며, 개발자가 시
 ### 📐 상세 반응형 규격 (Responsive Specs)
 - **Breakpoint**: X축 768px (Mobile), Y축 500px (Compact/Landscape).
 - **Minimap Slot**: 160px(PC) → **110px(Mobile/Compact)**. 시야 확보를 위해 가로/세로 폭과 여백을 최적화.
-- **Chat Window Slot**: 260x150px(PC) → **200x110px(Mobile)**. 텍스트 시인성을 고려해 폰트 사이즈(12pt → 11pt) 동반 축소.
+- **Chat Window Slot**: 260x150px(PC) → **200x110px(Mobile)**. 폰트 역시 12pt에서 **11pt**로 하향하여 간섭 제거.
 - **QuickAccess Slot**: 아이콘 44px(PC) → **36px(Mobile)**. 컴팩트 모드 시 바닥 마진(30px → 10px)을 줄여 게임 플레이 영역 확대.
 
 ### 🧩 슬롯 기반 재배치 (Slot-based Positioning)
