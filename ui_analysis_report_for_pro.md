@@ -8,7 +8,7 @@
 UI 시스템은 **Domain-Driven Layering** 원칙을 따르며, 개발자가 시스템 흐름을 파악하기 위해 확인해야 할 전체 소스 파일 목록은 다음과 같습니다.
 
 ### 🔌 플랫폼 진입점 및 프레임워크 (Entry & Framework)
-- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/ClientEntry.luau: 클라이언트 측 메인 진입점. 각 서비스 및 컨트롤러 초기화.
+- https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/client/Core/ClientEntry.client.luau: 클라이언트 측 메인 진입점. 각 서비스 및 컨트롤러 초기화.
 - https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Core/Framework.luau: 서비스/컨트롤러의 생명주기 관리 및 **의존성 주입(DI)** 엔진.
 - https://github.com/sangkuAhn/BrowserQuest-master/blob/main/src/shared/Core/UIEvents.luau: 모듈 간 통신용 **시그널 중계기**. Registry 패턴을 통한 느슨한 결합 구현.
 
